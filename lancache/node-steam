@@ -16,7 +16,7 @@ location /depot/ {
 # Store results from /serverlist/ request as they should allow us to
 # determine if we are missing an DNS entries for content servers
 location /serverlist/ {
-	proxy_store /data/www/cache/steam$uri/servers.txt;
+	proxy_store /srv/www/cache/steam$uri/servers.txt;
 	proxy_store_access user:rw group:rw all:r;
 	include lancache/proxy-base;
 }
